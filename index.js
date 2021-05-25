@@ -12,6 +12,8 @@ function replaceVal(temVal,oriVal){
     temperature = temperature.replace("{%tempmax%}",oriVal.main.temp_max); 
     temperature = temperature.replace("{%location%}",oriVal.name); 
     temperature = temperature.replace("{%country%}",oriVal.sys.country); 
+    temperature = temperature.replace("{%tempstatus%}",oriVal.weather[0].main); 
+
     return temperature;
 
 }
